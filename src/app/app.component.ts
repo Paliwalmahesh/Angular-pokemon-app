@@ -11,7 +11,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   title = 'Incubyte';
-
   allPokemon: PokemonModel[];
   pokemons: PokemonModel[] = [];
   pokemonform: FormGroup;
@@ -60,9 +59,12 @@ export class AppComponent implements OnInit {
     this.imageUrl.setValue('');
   }
 
-  setfalse() {
+  setAlertFalse() {
     this.setAlert = false;
     console.log(this.setAlert);
+  }
+  setErrorFalse() {
+    this.setError = false;
   }
 
   addPokemon() {
@@ -76,12 +78,12 @@ export class AppComponent implements OnInit {
         this.pokemons.unshift(response);
         // console.log(response);
         this.clearForm();
+        this.setAlert = true;
       },
       error: (error) => {
         this.setError = true;
         this.errorMsg = error.message;
       },
     });
-    this.setAlert = true;
   }
 }
