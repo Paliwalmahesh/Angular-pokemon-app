@@ -4,23 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import {HttpClientModule} from "@angular/common/http";
+import HeaderComponent from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 import { PokemonTableComponent } from './pokemon-table/pokemon-table.component';
+import { PokemonListComponentComponent } from './pokemon-list-component/pokemon-list-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PokemonTableComponent
+    PokemonTableComponent,
+    PokemonListComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
