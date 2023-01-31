@@ -10,7 +10,10 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonListComponentComponent } from './pokemon-list-component/pokemon-list-component.component';
 import { PokemonCardDetailsComponent } from './pokemon-card-details/pokemon-card-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ModelComponentComponent } from './model-component/model-component.component';
+import {
+  ModelComponentComponent,
+  NgbdModalContent,
+} from './model-component/model-component.component';
 
 @NgModule({
   declarations: [
