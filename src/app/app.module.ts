@@ -6,15 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import HeaderComponent from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PokemonTableComponent } from './pokemon-table/pokemon-table.component';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonListComponentComponent } from './pokemon-list-component/pokemon-list-component.component';
+import { PokemonCardDetailsComponent } from './pokemon-card-details/pokemon-card-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PokemonTableComponent,
+    PokemonCardComponent,
     PokemonListComponentComponent,
+    PokemonCardDetailsComponent,
   ],
   imports: [
     BrowserModule,
