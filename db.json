@@ -89,6 +89,18 @@
       "name": "Venusaur",
       "speciality": "grass",
       "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+    },
+    {
+      "name": "kjfha",
+      "speciality": "lasf",
+      "imageUrl": "https;/jfh.com",
+      "id": 16
+    },
+    {
+      "name": "1",
+      "speciality": "2",
+      "imageUrl": "3.com",
+      "id": 17
     }
   ]
 }
