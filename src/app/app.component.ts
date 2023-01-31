@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { PokemonModel } from './model/pokemon.model';
 import { PokemonService } from './services/pokemon.service';
 import { HttpClient } from '@angular/common/http';
@@ -27,9 +32,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonform = this.fb.group({
-      name: this.fb.control('Abc'),
-      speciality: this.fb.control('pi'),
-      imageUrl: this.fb.control('hhtp'),
+      name: this.fb.control('', [Validators.required]),
+      speciality: this.fb.control('', [Validators.required, Validators.email]),
+      imageUrl: this.fb.control('', [Validators.required]),
     });
     this.pokemonServices.getPokemons().subscribe({
       next: (response) => {
