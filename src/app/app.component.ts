@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.pokemonform = this.fb.group({
       name: this.fb.control('', Validators.required),
-      speciality: this.fb.control(''),
+      speciality: this.fb.control('', [Validators.required, Validators.email]),
       imageUrl: this.fb.control(
         '',
         Validators.pattern(

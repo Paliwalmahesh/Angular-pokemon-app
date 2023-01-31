@@ -72,6 +72,7 @@
                 formControlName="name"
               />
             </div>
+            <span *ngIf="name && name.invalid  && name.touched" style="color: red;">invalid</span>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Speciality</label
@@ -83,6 +84,7 @@
                 formControlName="speciality"
                 placeholder="Pokemon Name"
               />
+              <span *ngIf="speciality && speciality.invalid  && speciality.touched" style="color: red;">invalid</span>
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">URL</label>
@@ -91,11 +93,12 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 formControlName="imageUrl"
-                npm
+                
                 placeholder="Pokemon Name"
               />
               <div style="color: red" *ngIf="imageUrl.invalid">url invalid</div>
             </div>
+            <span *ngIf=" imageUrl && imageUrl.invalid  && imageUrl.touched" style="color: red;">Invalid</span>
           </form>
         </div>
         <div class="modal-footer">
@@ -111,6 +114,7 @@
             class="btn btn-primary"
             (click)="addPokemon()"
             data-bs-dismiss="modal"
+            [disabled]="pokemonform.invalid"
           >
             Save changes
           </button>
