@@ -96,6 +96,7 @@
                 
                 placeholder="Pokemon Name"
               />
+              <div style="color: red" *ngIf="imageUrl.invalid">url invalid</div>
             </div>
             <span *ngIf=" imageUrl && imageUrl.invalid  && imageUrl.touched" style="color: red;">Invalid</span>
           </form>
