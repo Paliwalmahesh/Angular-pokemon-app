@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonListComponentComponent } from './pokemon-list-component/pokemon-list-component.component';
 import { PokemonCardDetailsComponent } from './pokemon-card-details/pokemon-card-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PokemonCardDetailsComponent } from './pokemon-card-details/pokemon-card
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
