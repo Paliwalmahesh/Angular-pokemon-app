@@ -12,8 +12,11 @@ export class PokemonService {
   public getPokemons() {
     return this.http.get<PokemonModel[]>(this.baseUrl);
   }
+  public getPokemon(id: number) {
+    return this.http.get<PokemonModel>(this.baseUrl + '/' + id);
+  }
 
-  savePokemon(pokemon:PokemonModel){
-    return this.http.post<PokemonModel[]>(this.baseUrl,pokemon);
+  savePokemon(pokemon: PokemonModel) {
+    return this.http.post<PokemonModel[]>(this.baseUrl, pokemon);
   }
 }

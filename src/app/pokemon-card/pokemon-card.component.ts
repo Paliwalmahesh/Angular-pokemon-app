@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { PokemonModel } from '../model/pokemon.model';
 
 @Component({
-  selector: 'app-pokemon-table',
-  templateUrl: './pokemon-table.component.html',
-  styleUrls: ['./pokemon-table.component.css'],
+  selector: 'app-pokemon-card',
+  templateUrl: './pokemon-card.component.html',
+  styleUrls: ['./pokemon-card.component.css'],
 })
-export class PokemonTableComponent {
+export class PokemonCardComponent {
   @Input() pokemon: PokemonModel ;
   constructor(){
     this.pokemon = {
