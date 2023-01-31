@@ -12,13 +12,14 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <button
+    <!-- <button
       class="btn btn-primary my-2 mx-3"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
       Pokemon
-    </button>
+    </button> -->
+    <app-model-component></app-model-component>
     <div
       class="collapse navbar-collapse float-end"
       id="navbarSupportedContent "
@@ -30,8 +31,16 @@
           type="search"
           placeholder="Search"
           aria-label="Search"
+          id="search-input"
+          (ngModelChange)="changeSearchTerm($event)"
         />
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button
+          class="btn btn-outline-success"
+          type="submit"
+          (click)="searchPokemons(); $event.preventDefault()"
+        >
+          Search
+        </button>
       </form>
     </div>
   </div>
