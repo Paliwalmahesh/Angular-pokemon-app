@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PokemonListComponentComponent } from './pokemon-list-component/pokemon-list-component.component';
-import { PokemonCardDetailsComponent } from './pokemon-card-details/pokemon-card-details.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
+  { path: '', component: WelcomeComponent },
   {
     path: 'list',
-    component: PokemonListComponentComponent,
+    loadChildren: () =>
+      import('./pokemon/pokemon.module').then((m) => m.PokemonModule),
     // data: { searchedTerm: 'bulba' },
   },
-  { path: 'details/:id', component: PokemonCardDetailsComponent },
-  { path: '', redirectTo: '/list', pathMatch: 'full' },
-  { path: 'list-search', component: PokemonListComponentComponent },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./about/about.module').then((m) => m.AboutModule),
+  },
 ];
 
 @NgModule({
