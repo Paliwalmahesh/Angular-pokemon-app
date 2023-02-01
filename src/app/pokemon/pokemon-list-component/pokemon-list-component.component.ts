@@ -74,10 +74,11 @@ export class PokemonListComponentComponent implements OnInit {
   }
 
   filterPokemon() {
-    if (this.searchTerm !== null)
+    if (this.searchTerm !== null) {
       this.currpokemons = this.pokemons.filter((pokemon) =>
         pokemon.name.includes(this.searchTerm!)
       );
-    else alert('error');
+      console.log(this.currpokemons);
+    } else alert('error');
   }
 }

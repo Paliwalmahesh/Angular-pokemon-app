@@ -21,9 +21,7 @@
     class="container d-flex flex-wrap gap-4 my-2 text-center justify-content-center my-5"
   >
     <div *ngFor="let pokemon of currpokemons">
-      <a routerLink="/details/{{ pokemon.id }}">
-        <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
-      </a>
+      <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
     </div>
   </div>
 

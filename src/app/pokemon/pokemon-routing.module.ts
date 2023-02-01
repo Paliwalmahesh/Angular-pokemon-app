@@ -8,8 +8,12 @@ const routes: Routes = [
     path: '',
     component: PokemonListComponentComponent,
   },
-  { path: 'details/:id', component: PokemonCardDetailsComponent },
-  { path: 'list-search', component: PokemonListComponentComponent },
+  {
+    path: 'search',
+    component: PokemonListComponentComponent,
+    pathMatch: 'full',
+  },
+  { path: ':id', component: PokemonCardDetailsComponent },
 ];
 
 @NgModule({

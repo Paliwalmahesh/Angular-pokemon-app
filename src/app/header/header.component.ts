@@ -25,7 +25,7 @@ export default class HeaderComponent {
   searchPokemons() {
     const input = document.querySelector('#search-input') as HTMLInputElement;
     this.searchedTerm = input.value;
-    this.router.navigate(['/list-search'], {
+    this.router.navigate(['/pokemons/search'], {
       queryParams: { searchTerm: this.searchedTerm },
     });
     // this.location.go(`/list-search/?searchTerm=${this.searchedTerm}`);

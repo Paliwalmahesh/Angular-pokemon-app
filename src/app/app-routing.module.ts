@@ -5,7 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
   {
-    path: 'list',
+    path: 'pokemons',
     loadChildren: () =>
       import('./pokemon/pokemon.module').then((m) => m.PokemonModule),
     // data: { searchedTerm: 'bulba' },
