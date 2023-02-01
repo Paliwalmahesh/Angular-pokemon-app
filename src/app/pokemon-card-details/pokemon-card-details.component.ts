@@ -33,7 +33,7 @@ export class PokemonCardDetailsComponent {
         this.pokemon = response;
         console.log(this.pokemon);
       },
-      error: (error) => {
+      error: (error: any) => {
         this.setError = true;
         this.errorMsg = error.message;
       },
