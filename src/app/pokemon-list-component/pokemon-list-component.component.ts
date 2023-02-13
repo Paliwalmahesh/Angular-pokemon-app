@@ -43,7 +43,9 @@ export class PokemonListComponentComponent implements OnInit {
     console.log(this.searchTerm);
     this.pokemonServices.getPokemons().subscribe({
       next: (response) => {
+        console.dir('res' + response);
         this.pokemons = response;
+        console.dir(this.pokemons);
         this.collectionSize = this.pokemons.length;
         this.refreshPokemon();
         if (this.searchTerm !== null && this.searchTerm !== undefined)
@@ -51,6 +53,8 @@ export class PokemonListComponentComponent implements OnInit {
         else this.refreshPokemon();
       },
       error: (error) => {
+        console.log(error);
+
         this.setError = true;
         this.errorMsg = error.message;
       },

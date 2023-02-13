@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PokemonModel } from '../model/pokemon.model';
+import { PokemonModel, specialityModel } from '../model/pokemon.model';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -7,12 +7,16 @@ import { PokemonModel } from '../model/pokemon.model';
   styleUrls: ['./pokemon-card.component.css'],
 })
 export class PokemonCardComponent {
-  @Input() pokemon: PokemonModel ;
-  constructor(){
-    this.pokemon = {
-      name :"",
-      speciality:  '',
-      imageUrl: '',
-    }
+  @Input() pokemon: PokemonModel = {
+    name: '',
+    speciality: {
+      id: 0,
+      name: '',
+    },
+    imageUrl: '',
+  };
+  constructor() {
+    console.log('[pokemon' + this.pokemon.speciality);
+    console.log(this.pokemon);
   }
 }

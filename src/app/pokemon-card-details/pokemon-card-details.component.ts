@@ -22,7 +22,10 @@ export class PokemonCardDetailsComponent {
   ) {
     this.pokemon = {
       name: '',
-      speciality: '',
+      speciality: {
+        id: 0,
+        name: '',
+      },
       imageUrl: '',
     };
     this.id = Number(this.route.snapshot.paramMap.get('id'));

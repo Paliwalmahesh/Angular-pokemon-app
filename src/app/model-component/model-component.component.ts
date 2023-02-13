@@ -8,7 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PokemonModel } from '../model/pokemon.model';
+import { pokemonCreate, PokemonModel } from '../model/pokemon.model';
 import { PokemonService } from '../services/pokemon.service';
 
 @Component({
@@ -55,19 +55,17 @@ export class NgbdModalContent {
   }
   clearForm() {
     this.name.setValue('');
-    this.speciality.setValue('');
+    this.speciality.setValue(0);
     this.imageUrl.setValue('');
   }
   addPokemon() {
-    let pokemonobj: PokemonModel = {
+    let pokemonobj: pokemonCreate = {
       name: this.name.value,
-      speciality: this.speciality.value,
+      specialityId: this.speciality.value,
       imageUrl: this.imageUrl.value,
     };
     this.pokemonServices.savePokemon(pokemonobj).subscribe({
       next: (response: any) => {
-        // this.pokemons.unshift(response);
-        // console.log(response);
         this.clearForm();
         this.setAlert = true;
       },
